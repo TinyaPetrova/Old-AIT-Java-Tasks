@@ -10,7 +10,6 @@ public class Task1 {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     try {
-      System.out.print("Введите размер списка: ");
       int size = scanner.nextInt();
       scanner.nextLine();
 
@@ -20,10 +19,9 @@ public class Task1 {
         names.add(name);
       }
 
-      System.out.println("Введите номер имени для вывода: ");
       int index = scanner.nextInt();
       String selectedName = names.get(index - 1);
-      System.out.println("Выбранное имя: " + selectedName);
+      System.out.println(selectedName);
 
     } catch (InputMismatchException e) {
       System.out.println("Ошибка ввода: нужен номер имени");
