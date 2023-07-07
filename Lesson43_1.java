@@ -12,17 +12,14 @@ public class Task1 {
     try {
       int size = scanner.nextInt();
       scanner.nextLine();
-
       List<String> names = new ArrayList<>();
       for (int i = 0; i < size; ++i) {
         String name = scanner.nextLine();
         names.add(name);
       }
-
       int index = scanner.nextInt();
       String selectedName = names.get(index - 1);
       System.out.println(selectedName);
-
     } catch (InputMismatchException e) {
       System.out.println("Ошибка ввода: нужен номер имени");
     } catch (IndexOutOfBoundsException e) {
