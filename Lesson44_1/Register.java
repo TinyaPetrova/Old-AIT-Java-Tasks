@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/*
+Класс Register, в котором мы реализуем методы:
+- addInteractive (чтобы добавить позицию);
+- closeBill (чтобы закрыть чек).
+*/
 public class Register {
 
   private final List<Bill> bills = new ArrayList<>();
