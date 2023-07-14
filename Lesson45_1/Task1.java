@@ -15,18 +15,26 @@ import java.util.Set;
  */
 
 public class Task1 {
-  
+
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     System.out.print("Введите кол-во чисел: ");
+    while (!scanner.hasNextInt()) {
+      System.out.println("Ввод некорректен, нужно целое число: ");
+      scanner.next();
+    }
     int count = scanner.nextInt();
     Set<Integer> numbers = new HashSet<>();
-    System.out.println("Введите числа, каждое с новой строки: ");
-    for (int i = 0; i < count; i++) {
+    System.out.println("Введите числа: ");
+    for (int i = 0; i < count; ++i) {
+      while (!scanner.hasNextInt()) {
+        System.out.println("Ввод некорректен, нужно целое число: ");
+        scanner.next();
+      }
       int number = scanner.nextInt();
       numbers.add(number);
     }
-    System.out.println("Полученное множество: ");
+    System.out.println("Получившееся множество: ");
     for (int number : numbers) {
       System.out.println(number);
     }
