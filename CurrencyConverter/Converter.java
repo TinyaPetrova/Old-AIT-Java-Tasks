@@ -3,9 +3,9 @@ import java.util.Map;
 
 public class Converter {
 
-  private Map<String, Double> eurRates;
-  private Map<String, Double> plnRates;
-  private Map<String, Double> usdRates;
+  private Map<Currency, Double> eurRates;
+  private Map<Currency, Double> plnRates;
+  private Map<Currency, Double> usdRates;
 
   public Converter() {
     eurRates = new HashMap<>();
@@ -21,14 +21,14 @@ public class Converter {
     usdRates.put("PLN", 1.8);
   }
 
-  public double getRate(String sourceCurrencyCode, String targetCurrencyCode) {
+  public double getRate(Currency sourceCurrencyCode, Currency targetCurrencyCode) {
     // тут через иф и элс иф пропишем ретёрны типа того:
     if (sourceCurrencyCode.equals("EUR")) {
       return eurRates.get(targetCurrencyCode);
     } else if // и т. д.
   }
 
-  public boolean isValidCurrency(String currencyName) {
+  public boolean isValidCurrency(Currency currency) {
     return true;
     // тут надо подумать, но можно просто через contains() проверку сделать
   }
