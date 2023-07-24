@@ -18,7 +18,6 @@ public class Task1 {
   public static void main(String[] args) {
     File inputFile = new File("Excercises/res/in.txt");
     File outputFile = new File("Excercises/res/out.txt");
-
     int number;
     try {
       Scanner scanner = new Scanner(inputFile);
@@ -28,7 +27,6 @@ public class Task1 {
       System.err.println("Файл не найден: " + e.getMessage());
       return;
     }
-
     String binaryString = Integer.toBinaryString(number);
     try {
       FileWriter writer = new FileWriter(outputFile);
@@ -38,7 +36,6 @@ public class Task1 {
       System.err.println("Ошибка при записи в файл: " + e.getMessage());
       return;
     }
-
     System.out.println("Двоичное представление числа " + number + " записано в файл 'out.txt'");
   }
 }
